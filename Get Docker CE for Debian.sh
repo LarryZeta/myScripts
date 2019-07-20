@@ -22,8 +22,8 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -\
 echo "Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88"
 sudo apt-key fingerprint 0EBFCD88
 read -p "Is is correct? [Y/n]" varify
-if test $varify = 'n' || $varify = 'N'; then
-    break
+if [ $varify=='n' ]||[ $varify=='N' ]; then
+        exit 1
 fi
 
 # 4.Use the following command to set up the stable repository.
