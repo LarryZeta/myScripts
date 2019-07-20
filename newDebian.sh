@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# change source
+# https://github.com/oooldking/script
+wget    git.io/superupdate.sh
+bash    superupdate.sh
+rm      superupdate.sh
+
+# update apt
+apt update
+apt upgrade
+
+# install some packages
+apt install sudo git zsh neovim neofetch -y
+
+# add normal user to sudo 
+read -p "add normaluser name:" username
+
+adduser $username
+adduser $username sudo
+su $username
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# install oh-my-zsh pulg-ins
+# Spaceship ZSH 
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+echo "TODO Set ZSH_THEME="spaceship" in your .zshrc"
+
+# install zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+echo "TODO Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+    plugins=(zsh-autosuggestions)"
+
+# install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "TODO plugins=( [plugins...] zsh-syntax-highlighting)"
