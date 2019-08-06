@@ -29,5 +29,7 @@ fi
 # uid   [ unknown] nginx signing key <signing-key@nginx.com>
 # To install nginx, run the following commands:
 
+if [ $varify=='y' ]||[ $varify=='Y' ]; then
 sudo apt update
 sudo apt install nginx
+fi

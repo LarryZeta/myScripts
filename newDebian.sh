@@ -18,4 +18,4 @@ read -p "add normaluser name:" username
 
 adduser $username
 adduser $username sudo
-su $username
+

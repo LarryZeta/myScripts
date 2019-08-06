@@ -26,6 +26,7 @@ if [ $varify=='n' ]||[ $varify=='N' ]; then
         exit 1
 fi
 
+if [ $varify=='y' ]||[ $varify=='Y' ]; then
 # 4.Use the following command to set up the stable repository.
 # x86_64 / amd64
 sudo add-apt-repository \
@@ -40,3 +41,4 @@ sudo apt-get update
 
 # 2. Install the latest version of Docker CE and containerd, or go to the next step to install a specific version:
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+fi
