@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 # https://docs.docker.com/install/linux/docker-ce/debian/
 
