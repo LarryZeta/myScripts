@@ -19,3 +19,6 @@ read -p "add normaluser name:" username
 adduser $username
 adduser $username sudo
 
+# install oh-my-zsh
+su -$username -s sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+

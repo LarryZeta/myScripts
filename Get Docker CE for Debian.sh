@@ -24,9 +24,8 @@ sudo apt-key fingerprint 0EBFCD88
 read -p "Is is correct? [Y/n]" varify
 if [ $varify=='n' ]||[ $varify=='N' ]; then
         exit 1
-fi
 
-if [ $varify=='y' ]||[ $varify=='Y' ]; then
+elif [ $varify=='y' ]||[ $varify=='Y' ]; then
 # 4.Use the following command to set up the stable repository.
 # x86_64 / amd64
 sudo add-apt-repository \
