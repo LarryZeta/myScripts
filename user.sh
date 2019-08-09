@@ -1,9 +1,3 @@
-#!/bin/sh
-
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-read temp
 # install oh-my-zsh pulg-ins
 # Spaceship ZSH 
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
