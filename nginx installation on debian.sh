@@ -31,15 +31,16 @@ echo "The output should contain the full fingerprint 573B FD6B 3D8F BC64 1079 A6
 sudo apt-key fingerprint ABF5BD827BD9BF62
 
 read -p "Is is correct? [Y/n]" varify
-if [ $varify = 'n' ]||[ $varify = 'N' ]; then
-        exit 1
 
 # pub   rsa2048 2011-08-19 [SC] [expires: 2024-06-14]
 #      573B FD6B 3D8F BC64 1079  A6AB ABF5 BD82 7BD9 BF62
 # uid   [ unknown] nginx signing key <signing-key@nginx.com>
 # To install nginx, run the following commands:
 
-elif [ $varify = 'y' ]||[ $varify = 'Y' ]; then
+if [ $varify = 'y' ]||[ $varify = 'Y' ]; then
 sudo apt update
 sudo apt install nginx
+else
+echo "Abort."
+exit 1
 fi
