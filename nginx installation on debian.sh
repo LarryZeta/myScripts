@@ -11,12 +11,12 @@ echo "1. mainline"
 
 read version
 
-if [[ $varsion='0' || !$version ]]; then
+if [ -z $varsion ]||[ $varsion = '0' ]; then
 # To set up the apt repository for stable nginx packages, run the following command:
 echo "deb http://nginx.org/packages/debian `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
 
-elif [[ $varsion='1' ]]; then
+elif [ $varsion = '1' ]; then
 # If you would like to use mainline nginx packages, run the following command instead:
 echo "deb http://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
@@ -31,7 +31,7 @@ echo "The output should contain the full fingerprint 573B FD6B 3D8F BC64 1079 A6
 sudo apt-key fingerprint ABF5BD827BD9BF62
 
 read -p "Is is correct? [Y/n]" varify
-if [[ $varify='n' || $varify='N' ]]; then
+if [ $varify = 'n' ]||[ $varify = 'N' ]; then
         exit 1
 
 # pub   rsa2048 2011-08-19 [SC] [expires: 2024-06-14]
@@ -39,7 +39,7 @@ if [[ $varify='n' || $varify='N' ]]; then
 # uid   [ unknown] nginx signing key <signing-key@nginx.com>
 # To install nginx, run the following commands:
 
-elif [[ $varify='y' || $varify='Y' ]]; then
+elif [ $varify = 'y' ]||[ $varify = 'Y' ]; then
 sudo apt update
 sudo apt install nginx
 fi
