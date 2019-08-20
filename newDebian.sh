@@ -11,7 +11,10 @@ apt update
 apt upgrade
 
 # install some packages
-apt install sudo git zsh curl neovim neofetch -y
+apt install sudo git zsh curl neovim socat neofetch -y
+
+# install acme.sh
+curl  https://get.acme.sh | sh
 
 # add normal user to sudo 
 read -p "add normaluser name:" username
