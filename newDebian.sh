@@ -11,7 +11,7 @@ apt update
 apt upgrade
 
 # install some packages
-apt install sudo git zsh neovim neofetch -y
+apt install sudo git zsh curl neovim neofetch -y
 
 # add normal user to sudo 
 read -p "add normaluser name:" username
