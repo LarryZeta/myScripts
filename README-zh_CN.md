@@ -2,7 +2,7 @@
 
 ### [newDebian.sh](./newDebian.sh)  
 
-- 把 apt 源换成 http://http://cdn-fastly.deb.debian.org/debian。
+- 把 apt 源换成 http://cdn-fastly.deb.debian.org/debian。
 
 - 更新 apt 列表。
 - 安装 sudo git zsh curl neovim socat neofetch acme.sh。

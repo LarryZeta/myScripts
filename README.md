@@ -4,7 +4,7 @@
 
 ### [newDebian.sh](./newDebian.sh)  
 
-- Change source to http://http://cdn-fastly.deb.debian.org/debian.
+- Change source to http://cdn-fastly.deb.debian.org/debian.
 
 - Update apt list.
 - Install sudo git zsh curl neovim socat neofetch acme.sh.
