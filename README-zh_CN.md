@@ -13,10 +13,10 @@
 - 安装 oh-my-zsh。
 - 安装 Spaceship ZSH, zsh-autosuggestions, zsh-syntax-highlighting。
 
-### [nginx installation on debian.sh](./nginx installation on debian.sh)
+### [Get-Nginx-for-Debian.sh](./Get-Nginx-for-Debian.sh)
 
 根据[官方文档](http://nginx.org/en/linux_packages.html#Debian)安装 nginx（添加官方源的方式）。
 
-### [Get Docker CE for Debian.sh](./Get Docker CE for Debian.sh)
+### [Get-Docker-CE-for-Debian.sh](./Get-Docker-CE-for-Debian.sh)
 
 根据[官方文档](https://docs.docker.com/install/linux/docker-ce/debian/)安装 DockerCE（添加官方源的方式）。
