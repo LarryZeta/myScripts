@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# http://nginx.org/en/linux_packages.html#Debian
+
 # Install the prerequisites:
 
 sudo apt install curl gnupg2 ca-certificates lsb-release
