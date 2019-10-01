@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # http://nginx.org/en/linux_packages.html#Debian
 

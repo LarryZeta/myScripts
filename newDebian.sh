@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # change source
 # https://github.com/oooldking/script
